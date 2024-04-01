@@ -1,13 +1,10 @@
 import os
 import google.generativeai as genai
-from dotenv import load_dotenv
-load_dotenv()
+ 
 import streamlit as st
 from gdocs import gdocs
  
-
-GOOGLE_API_KEY = st.secrets('GOOGLE_API_KEY')
-
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]  
 genai.configure(api_key=GOOGLE_API_KEY)
 
 def messages_to_text(messages):

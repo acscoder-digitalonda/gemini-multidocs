@@ -28,7 +28,7 @@ def send_llm(prompt,data):
             system_prompting += "--------------------------------------------------"
             system_prompting += "\n\n"
 
-    chat_model = genai.GenerativeModel('gemini-pro')
+    chat_model = genai.GenerativeModel('gemini-1.5-flash-latest')
     
     our_sms = []
     our_sms.append({"role": "system", "content": system_prompting })
